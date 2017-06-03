@@ -58,11 +58,10 @@ background-color: white;
 width: 58%;
 height: 45%;
 padding: 20px;
-
-
 opacity: 0.6;
 border-radius: 17px;
 }
+
 .donor_text_body{
 width: 100%;
 padding: 20px;
@@ -79,6 +78,20 @@ padding: 20px;
 .innerbg{}
 section{
   /* The image used */
+
+}
+
+#inner{
+  /* The image used */
+     background-image: url("../img/pic1.png");
+
+     /* Full height */
+     height: 100%;
+
+     /* Center and scale the image nicely */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 
 }
 /*Donor Landing*/
