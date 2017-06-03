@@ -4,11 +4,12 @@ var User = require('../models/User');
 var Pickup = require('../models/Pickups');
 
 // /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+  next();
+});
 
-// donor creates new pickup
+//donor creates new pickup
 router.post('newPickup', function(req, res, next) {
   Pickup.create(req.body, function(err, pickup) {
     if (err) {
