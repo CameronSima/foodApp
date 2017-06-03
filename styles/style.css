@@ -1,20 +1,38 @@
 body{
 
 }
-
-header{
-  height: auto;
-    background-color: blue;
-}
 #logo{
+float:left;
+}
+.menu{
+  float:right;
+}
+header{
+    height: 106px;
+    background-color: #006a54;
+}
+
+img{
 
 }
+
 
 #map{
   overflow: visible !important;
 }
 
+
 #inner{
-  height: 80%;
+  /* The image used */
+     background-image: url("../img/pic1.png");
+
+     /* Full height */
+     height: 100%;
+
+     /* Center and scale the image nicely */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 
 }
+/*Donor Landing*/
