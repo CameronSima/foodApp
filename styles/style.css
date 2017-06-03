@@ -1,5 +1,6 @@
 
 body{
+
   background-image: url("../img/pic1.png");
  text-align: center;
  position:relative;
@@ -11,6 +12,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 
 }
 #logo{
@@ -80,6 +82,11 @@ section{
   /* The image used */
 
 }
+
+#map{
+  overflow: visible !important;
+}
+
 
 #inner{
   /* The image used */
