@@ -1,0 +1,16 @@
+body{
+  background-color: green;
+}
+
+header{
+  height: auto;
+    background-color: blue;
+}
+#logo{
+
+}
+
+#inner{
+  height: 80%;
+  background-color: cornsilk;
+}
