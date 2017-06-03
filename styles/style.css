@@ -1,5 +1,5 @@
 body{
-  background-color: green;
+
 }
 
 header{
@@ -10,7 +10,11 @@ header{
 
 }
 
+#map{
+  overflow: visible !important;
+}
+
 #inner{
   height: 80%;
-  background-color: cornsilk;
+
 }
