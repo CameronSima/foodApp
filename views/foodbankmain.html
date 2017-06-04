@@ -1,70 +1,85 @@
 <!DOCTYPE>
 <html>
-	<head>
-		<title>Food Bank of Delaware: Volunteers</title>
-		<link rel="stylesheet" href="../foundation/css/foundation.css" />
-    <link rel="stylesheet" href="../styles/style.css" />
-		<script src="../foundation/js/app.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	</head>
+<head>
+	<title>Food Bank</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<style>
+		/* Always set the map height explicitly to define the size of the div
+			 * element that contains the map. */
 
-<body>
-<div id="foodbank_main_overlay">
-	<header class="food_bank_main_header">
+		#map {
+			height: 100%;
+		}
+		/* Optional: Makes the sample page fill the window. */
 
-		<div id="logo" /><a href="http://www.fbd.org/">	</a>
-		<img style="height: 71px;" src="../img/logo.png" />
+		html,
+		body {
+			height: 75%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+
+	<link rel="stylesheet" href="../foundation/css/foundation.css" />
+	<link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body id="volunteer_homepage_body">
+	<div id="volunteer_homepage_overlay">
+		<header class="volunteer_homepage_header">
+			<div id="logo" />
+			<img style="height: 71px;" src="../img/logo.png" />
 	</div>
 	<div class="menu">
-	<ul class="menu">
-		<li><a href="./foodbankmain.html">Food Bank</a></li>
-		<li><a href="./volunteer_homepage.html">Map</a></li>
-		<li><a href="./volunteer_signup.html">Account</a></li>
-	</ul>
+		<ul class="menu">
+			<li><a href="./foodbankmain.html">Food Bank</a></li>
+			<li><a href="./volunteer_homepage.html">Map</a></li>
+			<li><a href="./volunteer_signup.html">Account</a></li>
+		</ul>
 	</div>
 	</header>
 
 
 		<div id="Page">
 
-
-
-<!-- <div class="login-box">
-  <div class="row collapse expanded">
-    <div class="small-12 medium-6 column small-order-2 medium-order-1 signup">
-      <div class="login-box-form-section">
-        <h1 class="login-box-title">Sign up</h1>
-        <input class="login-box-input" type="text" name="username" placeholder="Username" />
-        <input class="login-box-input" type="email" name="email" placeholder="E-mail" />
-        <input class="login-box-input" type="password" name="password" placeholder="Password" />
-        <input class="login-box-input" type="password" name="password2" placeholder="Retype password" />
-        <input class="login-box-submit-button button" type="button" name="signup_submit" value="Sign up" />
-      </div>
-
-    </div>
-    <div class="small-12 medium-6 column small-order-1 medium-order-2 login-box-social-section">
-    </div>
-  </div>
-</div> -->
-			<h1>Upcoming Events</h1>
+			<h1 class="header_center">UPCOMING EVENTS</h1>
 <div class="foodbankmain_row row">
-  <div class="small-12 large-4 columns">
-            <span class="card"><a href="http://fbd.volunteerhub.com/Events/Event/Summary.aspx?EventID=4577586"><h3>Newark Kitchen Volunteer (morning)</h3></a></span>
-              <i>Monday, June 5, 6:30am - 9:30am</i>
-              <p>Volunteers will help make and pack meals for our Children’s Afterschool Feeding Program.  No culinary experience required; training is provided.</p>
-            </div>
-  <div class="small-12 large-4 columns">
-              <span class="card">  <a href="http://fbd.volunteerhub.com/Events/Event/Summary.aspx?EventID=3649018"><h3>Milford Morning Volunteer Room</h3></a></span>
-              <i>Monday, June 5, 9 am - 12 pm</i>
-              <p>Lorem ipsum et cetera.</p>
-          </div>
-  <div class="small-12 large-4 columns">
+	<table>
+	  <thead>
+	    <tr>
+	      <th width="250"><span class="card">
+					<a href="http://fbd.volunteerhub.com/Events/Event/Summary.aspx?EventID=4577586">
+						<h3>Newark Kitchen Volunteer (morning)</h3>
+					</a>
+				</span>
+					<i>Monday, June 5, 6:30am - 9:30am</i>
+					<p>Volunteers will help make and pack meals for our Children’s Afterschool Feeding Program.  No culinary experience required; training is provided.</p></th>
 
-  <span class="card"> <a href="http://fbd.volunteerhub.com/Events/Event/Summary.aspx?EventID=4441155"><h3>Milford Afternoon Volunteer Room Strike Out Hunger</h3></a></span>
-              <i>Monday, June 5, 1 pm - 4 pm</i>
-              <p>If you are a parent who would like to bring their child, please email VolunteerInMilford@FBD.org to add them to your event sign up.</p>
-         </div>
+	      <th width="150"><span class="card">
+					<a href="http://fbd.volunteerhub.com/Events/Event/Summary.aspx?EventID=4441155">
+		 			 <h3>Milford Afternoon Volunteer Room Strike Out Hunger</h3>
+		 		 </a>
+		 	 </span>
+		               <i>Monday, June 5, 1 pm - 4 pm</i>
+		               <p>If you are a parent who would like to bring their child, please email VolunteerInMilford@FBD.org to add them to your event sign up.</p>
+		         <th width="150"><span class="card">
+							 <a href="http://fbd.volunteerhub.com/Events/Event/Summary.aspx?EventID=4441155">
+		 						<h3>Milford Afternoon Volunteer Room Strike Out Hunger</h3>
+		 					</a>
+		 				</span>
+		 										<i>Monday, June 5, 1 pm - 4 pm</i>
+		 										<p>If you are a parent who would like to bring their child, please email VolunteerInMilford@FBD.org to add them to your event sign up.</p>
+		 							 </tr>
+	  </thead>
+	</table>
   </div>
+
+
+
+
+
 
 </div>
 </body>
