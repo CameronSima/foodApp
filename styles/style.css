@@ -1,13 +1,5 @@
 body {
-  background-image: url("../img/pic1.png");
-  text-align: center;
-  position: relative;
-  /* Full height */
-  /*height: 100%;*/
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 #logo {
@@ -31,7 +23,6 @@ body {
 header {
   min-height: 13%;
   /* background-color: #006a54; */
-  border-bottom: 1px black solid;
   opacity: .8;
 }
 
@@ -88,6 +79,19 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/*Donor UI*/
+#overlay{
+  background-image: url("../img/pic1.png");
+  text-align: center;
+  position: relative;
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 
 /*PickUp Detail*/
@@ -128,4 +132,38 @@ background-color: #000000;
   height: 50%;
   width: 50%;
   margin: 0 auto;
+}
+/*Volunteer Homepage*/
+
+
+#volunteer_homepage_overlay{
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-image: url(../img/pic2.png);
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#volunteer_homepage_inner {}
+
+#volunteer_homepage_body {
+  padding-bottom: 44px;
+}
+
+.volunteer_homepage_header{
+    background-color: #006a54;
+}
+
+.info {
+  width: 45%;
+  float: right;
+}
+#volunteer_homepage_map{
+}
+
+.volunteer_homepage_title{
+
 }
