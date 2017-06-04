@@ -1,15 +1,13 @@
-
 body {
   background-image: url("../img/pic1.png");
   text-align: center;
   position: relative;
   /* Full height */
-  height: 100%;
+  /*height: 100%;*/
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 #logo {
@@ -21,6 +19,7 @@ body {
   float: right;
   padding-top: 17px;
   padding-right: 9px;
+  padding-bottom: 39px;
 }
 
 .menu>li>a {
@@ -79,16 +78,7 @@ section {
   /* The image used */
 }
 
-
-
-
-#map{
-  overflow: visible !important;
-}
-
-
-#inner{
-
+#inner {
   /* The image used */
   background-image: url("../img/pic1.png");
   /* Full height */
@@ -101,3 +91,41 @@ section {
 
 
 /*PickUp Detail*/
+
+#pickup_details_overlay{
+  height: 100%;
+      position: absolute;
+      width: 100%;
+      background-image: url(../img/pic2.png);
+      text-align: center;
+      /* position: relative; */
+      /* height: 100%; */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+
+#pickup_detail_inner {}
+
+#pickup_detail_body {
+  padding-bottom: 44px;
+}
+
+.pickup_detail_header{
+background-color: #000000;
+}
+
+.info {
+  width: 45%;
+  float: right;
+}
+.map_side{
+      padding-top: 75px;
+          padding-left: 2%;
+}
+#map {
+  float: left;
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
+}
