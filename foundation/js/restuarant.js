@@ -33,18 +33,34 @@ var dropdown = document.getElementById('restaurantDropdown');
 
 function updateSuggestion() {
   dropdown.innerHTML = ""
-var text = document.getElementById('location_input').value
+var text = document.getElementById('location_input').value;
 
-restuarantList.forEach(function(el) {
-
-  if (el.name.substring(0, text.length) == text) {
-    
-    dropdown.innerHTML += "<option>" + el.name + ": " + el.address + "</option>"
-  }
-  
-})
+restuarantList.forEach(function(el)
+{
+  if (el.name.substring(0, text.length) == text)
+   {
+     dropdown.innerHTML += "<option id={el.id}>" + el.name + ": " + el.address + "</option>"
+    }
+  })
 
 }
+
+function GetLocation() {
+  var selected = document.getElementById('restaurantDropdown')
+  var address  = selected.options[selected.selectedIndex].text.split(':')[1]
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var latitude = results[0].geometry.location.lat();
+                    var longitude = results[0].geometry.location.lng();
+                    alert("Latitude: " + latitude + "\nLongitude: " + longitude);
+                } else {
+                    alert("Request failed.")
+                }
+            });
+        };
+
 
 class Restaurant
 {
@@ -61,5 +77,4 @@ class Restaurant
   {
     return this.id + " " + this.name + " " + this.address + " " + this.city + "<br>";
   }
-
 }
