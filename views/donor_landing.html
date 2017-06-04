@@ -34,7 +34,12 @@
     <div class="row">
     <!-- <div class="small-5 small-centered columns">  <div class="donor_background panel"></div></div> -->
   <div class="innerbg small-5 small-centered columns">    </div>
-      <div class="small-5 small-centered columns"><div id="donor_name"><h1>Chipotle</h1></div></div>
+      <div class="small-5 small-centered columns"><div id="donor_name">
+        <h1>Location: </h1>
+        <input type="text" onKeyPress="updateSuggestion()"id="location_input"></input>
+        </div></div>
+        <select id="restaurantDropdown">
+        </select>
         <div class="small-5 small-centered columns"><div id="amount"><h3>
         5 Units</h3></div>
 
@@ -46,9 +51,6 @@
             <button type="button" class=" button">Post Pickup</button>
           </div>
           </div></div>
-
-
-
         </div>
   </div>
 
@@ -61,6 +63,7 @@
 </section>
 
 </body>
+<script type="text/javascript" src="../foundation/js/restuarant.js"></script>
 
 
 <html>
