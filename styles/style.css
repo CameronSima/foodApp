@@ -24,11 +24,18 @@ font-family: 'Open Sans', sans-serif;
 background-color: #d5a10f;
 }
 
+.menu li a:hover{
+background-color: #d5a10f;
+}
+
 
 header {
   min-height: 13%;
-  /* background-color: #006a54; */
+   background-color: #006a54;
   opacity: .8;
+  -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 
 .menu>li {
@@ -179,7 +186,9 @@ background-color: #006a54;
 .food_bank_main_header{
   background-color: #006a54;
 }
-
+.card{
+  border:0px;
+}
 
 
 #foodbank_main_overlay{
@@ -202,9 +211,29 @@ background-color: #006a54;
 .foodbankmain_row{
     width: 80% !important;
 }
+.signup_btn{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.row_corrected{
+width:26em !important;
+}
+
+.login-box h3{
+  font-weight: 100;
+  color: #006a54;
+
+}
 
 
-
+table thead, table tbody, table tfoot {
+    border: 1px solid #000000;
+     background-color:inherit;
+}
+.header_center{
+  color:white;
+      font-weight: 100;
+}
 
 /*Volunteer Sign up*/
 
@@ -221,8 +250,8 @@ background-color: #006a54;
   background-size: cover;
 }
 
-#volunteer_signup_header{
-
+.volunteer_signup_header{
+padding-bottom: 5%;
 }
 
 .signup_btn{}
@@ -236,7 +265,20 @@ text-decoration: underline;
 text-decoration: underline;
 }
 
+#volunteer_signup_form{
+      padding-top: 76px;
+}
 
+.signup_form{
+  width: 42%;
+      margin: 0 auto;
+      height: 33px;
+      border-radius: 8px;
+}
+
+.top_clear{
+
+}
 
 
 
@@ -264,8 +306,11 @@ and (max-device-width : 480px) {
 
   header {
     min-height: 13%;
-    /* background-color: #006a54; */
+     background-color: #006a54;
     opacity: .8;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  box-shadow: 1px 2px 3px rgba(0,0,0,.5);
   }
 
   .menu>li {
@@ -400,7 +445,7 @@ and (max-device-width : 480px) {
   }
 
   .info {
-    width: 96%;
+  width: 96%;
   height: 34em;
   float: none;
   background-color: rgba(255, 255, 255, 0.56);

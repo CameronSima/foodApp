@@ -1,56 +1,77 @@
 <!DOCTYPE>
 <html>
-	<head>
-		<title>Food Bank of Delaware: Volunteers</title>
-		<link rel="stylesheet" href="../foundation/css/foundation.css" />
-    <link rel="stylesheet" href="../styles/style.css" />
-		<script src="../foundation/js/app.js"></script>
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	</head>
+<head>
+	<title>Food Bank</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<style>
+		/* Always set the map height explicitly to define the size of the div
+			 * element that contains the map. */
 
-<body>
-<div id="volunteer_signup_overlay">
-	<header class="volunteer_signup_header">
+		#map {
+			height: 100%;
+		}
+		/* Optional: Makes the sample page fill the window. */
 
-		<div id="logo" /><a href="http://www.fbd.org/">	</a>
-		<img style="height: 71px;" src="../img/logo.png" />
+		html,
+		body {
+			height: 75%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+
+	<link rel="stylesheet" href="../foundation/css/foundation.css" />
+	<link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body id="volunteer_homepage_body">
+	<div id="volunteer_homepage_overlay">
+		<header class="volunteer_homepage_header">
+			<div id="logo" />
+			<img style="height: 71px;" src="../img/logo.png" />
 	</div>
 	<div class="menu">
-	<ul class="menu">
-		<li><a href="./foodbankmain.html">Food Bank</a></li>
-		<li><a href="./volunteer_homepage.html">Map</a></li>
-		<li><a href="./volunteer_signup.html">Account</a></li>
-	</ul>
+		<ul class="menu">
+			<li><a href="./foodbankmain.html">Food Bank</a></li>
+			<li><a href="./volunteer_homepage.html">Map</a></li>
+			<li><a href="./volunteer_signup.html">Account</a></li>
+		</ul>
 	</div>
 	</header>
 
-
+<div id="volunteer_homepage_background">
 		<div id="volunteer_signup_form">
 
 
 
 <div class="login-box">
-  <div class="row collapse expanded">
+  <div class="row collapse expanded row_corrected">
     <div class="small-12 medium-6 column small-order-2 medium-order-1 signup">
       <div class="login-box-form-section">
         <h2 class="login-box-title">
 
-<button type="button" class="signup_btn">Volunteer</button>
+<button type="button" class="signup_btn"><h3>Volunteer</h3></button>
 <span class="clear"></span>
-<button type="button" class="signup_btn">Donor</button>
+<button type="button" class="signup_btn"><h3>Donor</h3></button>
 
 
 
 				</h2>
-        <input class="login-box-input" type="text" name="username" placeholder="Username" />
-        <input class="login-box-input" type="email" name="email" placeholder="E-mail" />
-        <input class="login-box-input" type="password" name="password" placeholder="Password" />
-        <input class="login-box-input" type="password" name="password2" placeholder="Retype password" />
-        <input class="login-box-submit-button button" type="button" name="signup_submit" value="Sign up" />
+        <input class="login-box-input signup_form" type="text" name="username" placeholder="Username" />
+<br>
+			  <input class="login-box-input signup_form" type="email" name="email" placeholder="E-mail" />
+<br>
+				<input class="login-box-input signup_form" type="password" name="password" placeholder="Password" />
+<br>
+			  <!-- <input class="login-box-input signup_form" type="password" name="password2" placeholder="Retype password" /> -->
+<br>
+			  <input class="login-box-submit-button button " type="button" name="signup_submit" value="Sign up" />
       </div>
 
     </div>
-
+</div>
   </div>
 </div>
 </body>
