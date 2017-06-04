@@ -1,5 +1,5 @@
 body {
-
+font-family: 'Open Sans', sans-serif;
 }
 
 #logo {
@@ -15,10 +15,15 @@ body {
 }
 
 .menu>li>a {
-  background-color: #d5a10f;
+
   border-radius: 3px;
   color: white;
 }
+
+.menu li a:active{
+background-color: #d5a10f;
+}
+
 
 header {
   min-height: 13%;
@@ -167,6 +172,76 @@ background-color: #006a54;
 .volunteer_homepage_title{
 
 }
+
+
+/*FoodBank*/
+
+.food_bank_main_header{
+  background-color: #006a54;
+}
+
+
+
+#foodbank_main_overlay{
+  background-image: url("../img/pic5.jpg");
+  text-align: center;
+  position: relative;
+  /* Full height */
+  /*height: 100%;*/
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup{
+  text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+.foodbankmain_row{
+    width: 80% !important;
+}
+
+
+
+
+/*Volunteer Sign up*/
+
+
+#volunteer_signup_overlay{
+  background-image: url("../img/pic6.jpg");
+  text-align: center;
+  position: relative;
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#volunteer_signup_header{
+
+}
+
+.signup_btn{}
+  .clear{padding-right: 12%;}
+
+.signup_btn:hover {
+text-decoration: underline;
+}
+
+.signup_btn:active {
+text-decoration: underline;
+}
+
+
+
+
+
+
+/*RESPONSIVE*/
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
@@ -186,11 +261,6 @@ and (max-device-width : 480px) {
     padding-bottom: 5px;
   }
 
-  .menu>li>a {
-    background-color: #d5a10f;
-    border-radius: 3px;
-    color: white;
-  }
 
   header {
     min-height: 13%;
@@ -296,13 +366,13 @@ and (max-device-width : 480px) {
     float: right;
   }
   .map_side{
-        padding-top: 75px;
+      padding-top: 5%;
             padding-left: 2%;
   }
   #map {
     float: left;
-    height: 52%;
-  width: 93%;
+    height: 39%;
+    width: 98%;
     margin: 0 auto;
   }
   /*Volunteer Homepage*/
@@ -330,12 +400,19 @@ and (max-device-width : 480px) {
   }
 
   .info {
-    width: 45%;
-    float: right;
+    width: 96%;
+  height: 34em;
+  float: none;
+  background-color: rgba(255, 255, 255, 0.56);
   }
   #volunteer_homepage_map{
   }
 
   .volunteer_homepage_title{padding-top: 62px;}
 
+}
+
+
+.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+     float: none;
 }
