@@ -1,0 +1,110 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../foundation/css/foundation.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  </head>
+<body id="pickup_detail_body">
+  <div id="pickup_details_overlay">
+
+  <header class="pickup_detail_header">
+
+    <div id="logo" />
+    <img style="height: 71px;" src="../img/logo.png" />
+  </div>
+  <div class="menu">
+    <ul class="menu">
+      <li><a href="./foodbankmain.html">Food Bank</a></li>
+  		<li><a href="./volunteer_homepage.html">Map</a></li>
+  		<li><a href="./volunteer_signup.html">Account</a></li>
+  </ul>
+  </div>
+
+  </header>
+
+    <div class="map_side">
+    <div id="map">
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 16
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude + .005,
+              lng: position.coords.longitude + .002,
+
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Some restaurant.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+
+             var lineCoords = [
+          pos,
+          {lat: pos.lat + .002, lng: pos.lng + .005}
+        ];
+        var path = new google.maps.Polyline({
+          path: lineCoords,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+        path.setMap(map);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+    </script></div>
+</div>
+    <div class="row info">
+
+  <div class="innerbg small-5 small-centered columns">    </div>
+      <div class="small-5 small-centered columns"><div id="status">  <h3>Status: Accepted</h3></div></div>
+        <div class="small-5 small-centered columns"><div id="amount">  <h3>Amount: 2 small boxes</h3></div>
+
+          <div class="large-7 small-centered columns"><div id="perishable"><h3>Perishable: Yes</h3>
+          </div></div>
+
+          <div class="large-7 small-centered columns"><div id="pickup_btn">
+            <a href=""><button type="button" class=" button">Accept</button></a>
+          </div>
+          </div></div>
+        </div>
+    </div>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfzMencPryiSpJtr0HajbKcgCd88yO3vc&callback=initMap">
+    </script>
+  </div>
+  </body>
+</html>
