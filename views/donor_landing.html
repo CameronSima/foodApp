@@ -40,14 +40,22 @@
         <select id="restaurantDropdown">
         </select>
         <div class="small-5 small-centered columns"><div id="amount"><h3>
-        5 Units</h3></div>
+        Units: <select style="width: 40px">
+          <option>1</option><option>2</option><option>3</option>4</option>
+          <<option>5</option><<option>6</option><<option>7</option>
+        </select>
+      </h3></div>
 
           <div class="medium-7 small-centered columns"><div id="perishable"><h3>
-            Perishable: Yes</h3>
+            Perishable: <select id=isPerishabel>
+              <option>YES</option>
+              <option>NO</option>
+              </option>
+            </select></h3>
           </div></div>
 
           <div class="medium-7 small-centered columns"><div id="pickup_btn">
-            <button type="button" class=" button">Post Pickup</button>
+            <button type="button" onclick="GetLocation()"class=" button">Post Pickup</button>
           </div>
           </div></div>
         </div>
@@ -57,12 +65,10 @@
 
 </div>
 
-
-
 </section>
 
 </body>
 <script type="text/javascript" src="../foundation/js/restuarant.js"></script>
-
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 <html>
