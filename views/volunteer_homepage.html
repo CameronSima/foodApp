@@ -48,8 +48,36 @@
 </p>
 </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <script>
+  function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+    let latOne = getQueryVariable("lat");
+    let longOne = getQueryVariable("long");
+    console.log(latOne);
+    console.log(longOne);
+
+    var map, infoWindow;
+=======
 <a href="./pickup_detail.html">
   <div style="float:none;" id="map"></div></a>
+>>>>>>> 7e954608bab566605493bd85d3e6b227829ef133
+=======
+ var map, infoWindow;
+
+<a href="./pickup_detail.html">
+  <div style="float:none;" id="map"></div></a>
+
+>>>>>>> f3b84ae221640c6c2b3982bc2e7994fbde5c05a3
 
   <script>
   function getQueryVariable(variable)
@@ -95,7 +123,15 @@
             lat: parseFloat(latOne),
             lng: parseFloat(longOne)
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+          };
+=======
+>>>>>>> 7e954608bab566605493bd85d3e6b227829ef133
+
+=======
+>>>>>>> f3b84ae221640c6c2b3982bc2e7994fbde5c05a3
          };
 
          var pos3 = {

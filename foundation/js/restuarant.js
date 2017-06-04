@@ -55,6 +55,8 @@ function GetLocation() {
                     var latitude = results[0].geometry.location.lat();
                     var longitude = results[0].geometry.location.lng();
                     alert("Latitude: " + latitude + "\nLongitude: " + longitude);
+window.location.href = "./volunteer_homepage.html?lat="+latitude+"&long="+longitude;
+
                 } else {
                     alert("Request failed.")
                 }
