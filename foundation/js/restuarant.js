@@ -22,13 +22,29 @@ xmlhttp.onreadystatechange = function()
         restuarantList.push(restAddEntry);
         id++;
       }
-
     }
 	}
 
-  document.getElementById("output").innerHTML = restuarantList;
+  //document.getElementById("output").innerHTML = restuarantList;
 }
 xmlhttp.send();
+
+var dropdown = document.getElementById('restaurantDropdown');
+
+function updateSuggestion() {
+  dropdown.innerHTML = ""
+var text = document.getElementById('location_input').value
+
+restuarantList.forEach(function(el) {
+
+  if (el.name.substring(0, text.length) == text) {
+    
+    dropdown.innerHTML += "<option>" + el.name + ": " + el.address + "</option>"
+  }
+  
+})
+
+}
 
 class Restaurant
 {
