@@ -109,8 +109,8 @@ section {
 /*PickUp Detail*/
 
 #pickup_details_overlay{
-  height: 100%;
-      position: absolute;
+
+      position: inherit;
       width: 100%;
       background-image: url(../img/pic2.png);
       text-align: center;
@@ -125,6 +125,16 @@ section {
 
 #pickup_detail_body {
   padding-bottom: 44px;
+
+position: inherit;
+width: 100%;
+ background-image: url(../img/pic2.png);
+text-align: center;
+/* position: relative; */
+/* height: 100%; */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 .pickup_detail_header{
@@ -135,14 +145,19 @@ background-color: #006a54;
   width: 45%;
   float: right;
 }
+
+.info h3{
+      font-weight: 300;
+}
 .map_side{
-      padding-top: 75px;
+      padding-top: 58px;
           padding-left: 2%;
+              padding-bottom: 47px;
 }
 #map {
-  float: left;
+
   height: 50%;
-  width: 50%;
+  width: 99%;
   margin: 0 auto;
 }
 /*Volunteer Homepage*/
@@ -171,7 +186,7 @@ background-color: #006a54;
 
 .info {
   width: 45%;
-  float: right;
+   float: none;
 }
 #volunteer_homepage_map{
 }
@@ -225,6 +240,12 @@ width:26em !important;
 
 }
 
+.login-box h3:hover{
+  font-weight: 400;
+  color: #006a54;
+
+}
+
 
 table thead, table tbody, table tfoot {
     border: 1px solid #000000;
@@ -255,14 +276,16 @@ padding-bottom: 5%;
 }
 
 .signup_btn{}
-  .clear{padding-right: 12%;}
+  .clear{
+    padding-right: 12%;
+  }
 
 .signup_btn:hover {
-text-decoration: underline;
+font-weight: 500;
 }
 
 .signup_btn:active {
-text-decoration: underline;
+font-weight: 500;
 }
 
 #volunteer_signup_form{
@@ -280,8 +303,25 @@ text-decoration: underline;
 
 }
 
+/*Event Page*/
+
+#event_page_overlay{
 
 
+  height: 100%;
+  position: absolute;
+  width: 100%;
+    background-image: url("../img/pic7.jpg");
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.event_center{
+  background-color: azure;
+opacity: .8;
+}
 
 /*RESPONSIVE*/
 @media only screen
@@ -446,17 +486,21 @@ and (max-device-width : 480px) {
 
   .info {
   width: 96%;
-  height: 34em;
+
   float: none;
   background-color: rgba(255, 255, 255, 0.56);
   }
   #volunteer_homepage_map{
   }
 
-  .volunteer_homepage_title{padding-top: 62px;}
+
 
 }
 
+.volunteer_homepage_title{padding-top: 62px;   }
+
+  .volunteer_homepage_title h1{  font-weight: 100;
+    color: #006a54;}
 
 .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
      float: none;
