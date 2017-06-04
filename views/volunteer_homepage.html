@@ -52,23 +52,34 @@
   <div style="float:none;" id="map"></div></a>
 
   <script>
-    // Note: This example requires that you consent to location sharing when
-    // prompted by your browser. If you see the error "The Geolocation service
-    // failed.", it means you probably did not give permission for the browser to
-    // locate you.
-    var map, infoWindow;
+  function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+    let latOne = getQueryVariable("lat");
+    let longOne = getQueryVariable("long");
+    console.log(latOne);
+    console.log(longOne);
 
-    function initMap() {
+   var map, infoWindow;
+
+   function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
         center: {
           lat: -34.397,
           lng: 150.644
         },
-        zoom: 14
+        zoom: 12
       });
       infoWindow = new google.maps.InfoWindow;
 
-      // Try HTML5 geolocation.
+     // Try HTML5 geolocation.
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
           var pos = {
@@ -76,29 +87,29 @@
             lng: position.coords.longitude
           };
 
-          infoWindow.setPosition(pos);
+         infoWindow.setPosition(pos);
           infoWindow.setContent('You are here!');
           infoWindow.open(map);
           map.setCenter(pos);
           var pos2 = {
-            lat: position.coords.latitude + .005,
-            lng: position.coords.longitude + .002
-          };
+            lat: parseFloat(latOne),
+            lng: parseFloat(longOne)
 
-          var pos3 = {
+
+         };
+
+         var pos3 = {
             lat: position.coords.latitude + .008,
             lng: position.coords.longitude + .01
           };
 
-          var marker = new google.maps.Marker({
+         var marker = new google.maps.Marker({
             position: pos2,
             map: map,
-            title: 'Hello World!'
           });
           var marker = new google.maps.Marker({
             position: pos3,
             map: map,
-            title: 'Hello World!'
           });
         }, function() {
           handleLocationError(true, infoWindow, map.getCenter());
@@ -109,7 +120,7 @@
       }
     }
 
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
       infoWindow.setPosition(pos);
       infoWindow.setContent(browserHasGeolocation ?
         'Error: The Geolocation service failed.' :

@@ -499,7 +499,7 @@ and (max-device-width : 480px) {
 
 .volunteer_homepage_title{padding-top: 62px;   }
 
-  .volunteer_homepage_title h1{  font-weight: 100;
+  .volunteer_homepage_title h1{  font-weight: 400;
     color: #006a54;}
 
 .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
